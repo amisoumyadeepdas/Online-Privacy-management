@@ -1,46 +1,148 @@
-# Social-Media-Web-App
-## Project
-###### Social Media Web Application
-NOTE ENV KEYS HAVE BEEN STRIPPED, MUST USE OWN KEYS IN ENV AND PROXY INSIDE PACKAGE.JSON
+# Social Media Web Application
 
-Social media web application clone along the lines of Signal, Facebook, and Twitter. This will include functionality of posting, commenting, and sharing other user’s posts, user authentication, notifications, and private messaging.
-Using React we will able to develope our website, as well as using Node.js to handle package management.
-## Technical Goals
-###### Posts, Comments, Sharing:
-Users will be able to custom tailor a ”post” to be accessible from other devices. A post will be described as a text or image upload.
-The author of the post as well as other users of the web application will be able to “comment” on existing posts. Comment defined as text or image response. 
-Users will be able to “share” an existing post. Share is defined as posting a link or iframe instance of the other post.
-###### User Authentication:
-Users will be able to login with their specific data to access posting, commenting, and sharing functionality.
-We aim to utilize JWT for authentication rather than using external libraries such as Passport.js
-Users' data will be stored in a database(MongoDB tentatively) to allow for recalling of existing post and profile pages.
-###### Notifications:
-Users will be notified through email and or browser for comments or shares on an existing post.
-Users can turn on or off notifications on publication of posts.
-## Languages/Frameworks
-React.js
-REST API
-HTML
-CSS
-JavaScript
-BCrypt
+This repository is a Social Media Web Application that provides a user experience similar to popular platforms like Signal, Facebook, and Twitter. The application enables users to create posts, comment, share, receive notifications, and engage in private messaging. Built using React and Node.js, it utilizes a REST API and MongoDB for database management.
 
-## Database
-MongoDB
+## Table of Contents
 
-# How to Start:
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Documentation](#documentation)
 
-https://nodejs.org/en/download/
+## Overview
 
-Download and run node js.
+The Social Media Web App allows users to:
 
-Open folder and navigate to client folder.
+- Create and customize posts with text or images.
+- Comment on and share other users' posts.
+- Log in with user authentication (using JSON Web Tokens).
+- Receive notifications for comments or shares.
+- Engage in private messaging with other users.
+- Control notification settings.
 
-From here open terminal and do npm i
+> **Note**: Environment keys are required and have been removed from this repository. Use your own keys in the `.env` file.
 
-You might need to install a few packages
+## Features
 
-Then do npm start
+### Posts, Comments, and Sharing
 
-Website should launch locally in browser.
-### [Documentation](https://github.com/tristingreenstein/Social-Media-Web-Application/wiki/Documentation)
+- **Posts**: Users can create posts with text or image content.
+- **Comments**: Users can comment on existing posts, including text and image replies.
+- **Sharing**: Users can share posts with a link or an embedded instance of the original post.
+
+### User Authentication
+
+- **Login/Signup**: Users can log in with secure JWT-based authentication.
+- **User Data Storage**: Data is stored in a MongoDB database to persist posts and profile information.
+
+### Notifications
+
+- **Alerts**: Users receive notifications for comments or shares on their posts.
+- **Email/Browser Notifications**: Configurable email or browser alerts.
+- **Notification Settings**: Users can enable or disable notifications.
+
+## Technologies Used
+
+- **Frontend**: React.js (HTML, CSS, JavaScript)
+- **Backend**: Node.js, Express.js, REST API
+- **Database**: MongoDB
+- **Authentication**: JWT
+- **Encryption**: Bcrypt for password hashing
+
+
+## Setup
+
+1. **Install Node.js**: Download and install Node.js from [here](https://nodejs.org/en/download/).
+
+2. **Clone the Repository**:
+
+    ```bash
+    git clone https://github.com/yourusername/Social-Media-Web-App.git
+    cd Social-Media-Web-App
+    ```
+
+3. **Set Up Environment Variables**:
+
+   Create a `.env` file in the `server/` directory and include the required environment variables (such as JWT_SECRET, MONGO_URI, etc.).
+
+4. **Install Dependencies**:
+
+    - **Client**: Open a terminal in the `client` directory and run:
+    
+        ```bash
+        npm install
+        ```
+
+    - **Server**: Open another terminal in the `server` directory and run:
+    
+        ```bash
+        npm install
+        ```
+
+5. **Run the Application**:
+
+   - **Client**: In the `client` directory, start the React app:
+    
+        ```bash
+        npm start
+        ```
+
+   - **Server**: In the `server` directory, start the Node.js server:
+    
+        ```bash
+        npm run dev
+        ```
+
+6. **Launch**:
+
+   The application should be running locally:
+   
+    - Client at `http://localhost:3000`
+    - Server at `http://localhost:5000`
+
+## Usage
+
+- **Home Page**: Displays the main feed with posts from users.
+- **User Authentication**: Register or log in to access features such as posting, commenting, and sharing.
+- **Profile Page**: Displays user information and posts.
+- **Notifications**: Get alerts for new comments or shares.
+
+## Screenshots
+
+### Home Page
+
+![Home Page](screenshots/home_page.png)
+
+### Profile Page
+
+![Profile Page](screenshots/profile_page.png)
+
+### Create Post
+
+![Create Post](screenshots/create_post.png)
+
+---
+
+## Documentation
+
+### File Structure Explanation
+
+- **client/public/assets**: Stores profile and canvas images used for testing.
+- **client/src/components**: Contains the main components of the application, including pages (Home, Login, Profile) and reusable components (Sidebar, Topbar, Feed, Post).
+- **client/src/dummyData.js**: Temporary data used for testing the app's interface.
+- **server/models**: Contains Mongoose schemas for `User` and `Post` data models.
+- **server/routes**: API endpoints for authentication (`auth.js`), posts (`post.js`), and users (`users.js`).
+
+---
+
+Feel free to contribute to this project by forking the repository and submitting pull requests. For any issues or feature requests, please open an issue in the repository.
+
+---
+
+Enjoy building your own social media experience!
+
+
