@@ -113,17 +113,23 @@ The Social Media Web App allows users to:
 
 ## Screenshots
 
-### Home Page
+### Login Page
 
-![Home Page](screenshots/home_page.png)
+![Home Page](https://github.com/user-attachments/assets/7b5e6138-16a2-418e-9870-112ec6dca986)
+
+### Registration Page
+
+![Home Page](https://github.com/user-attachments/assets/ba4dd308-d493-4bcd-9da0-220855a4ae98)
 
 ### Profile Page
 
-![Profile Page](screenshots/profile_page.png)
+![Profile Page](https://github.com/user-attachments/assets/c4a5e62a-5383-41a5-ab11-3f6940bcb77b)
+
 
 ### Create Post
 
-![Create Post](screenshots/create_post.png)
+![Create Post](https://github.com/user-attachments/assets/6017b401-72b6-40f4-9763-193ae2b62875)
+
 
 ---
 
